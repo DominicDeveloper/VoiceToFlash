@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
         binding.startDictation.setOnClickListener {
             val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
             intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
-            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE,"ru")
-            intent.putExtra("android.speech.extra.EXTRA_ADDITIONAL_LANGUAGES", arrayOf("ru"))
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE,"uz")
+            intent.putExtra("android.speech.extra.EXTRA_ADDITIONAL_LANGUAGES", arrayOf("uz"))
 
             intent.putExtra(RecognizerIntent.EXTRA_PROMPT,getString(R.string.speech_prompt))
 
@@ -42,9 +42,9 @@ class MainActivity : AppCompatActivity() {
 
                     binding.textOutput.setText(result[0])
                     val thetext:String = binding.textOutput.text.toString().lowercase()
-                    if (thetext == "выключай фонарики" || thetext == "включай фонар" || thetext == "включай фонара" || thetext == "включай спичку"){
+                    if (thetext == "chiroqni yoq" || thetext == "chiroq yonsin" ||thetext == "выключай фонарики" || thetext == "включай фонар" || thetext == "включай фонара" || thetext == "включай спичку"){
                         openFlash()
-                    }else if (thetext == "отключай спичку" || thetext == "отключайте спичку" || thetext == "спичку отключай"){
+                    }else if (thetext == "chiroqni ochib" || thetext == "chiroqni ochish" || thetext == "chiroqni o`chir" || thetext == "отключай спичку" || thetext == "отключайте спичку" || thetext == "спичку отключай"){
                         closeFlash()
                     }
                 }

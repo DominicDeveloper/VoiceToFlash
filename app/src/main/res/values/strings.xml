@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">VoiceToText</string>
-    <string name="speech_prompt">ru</string>
+    <string name="speech_prompt">uz</string>
 </resources>
